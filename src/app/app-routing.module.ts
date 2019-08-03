@@ -25,7 +25,7 @@ const routes: Routes = [
   // { path: 'bank-of-service-application', component: BankOfServiceApplicationComponent},
   // { path: 'file-uplaod', component: FileUplaodComponent},
   // { path: 'confirm', component: ConfirmComponent },
-  { path: '**', redirectTo: '/upi-password', pathMatch: 'full' }
+  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' }
  ];
 
 @NgModule({

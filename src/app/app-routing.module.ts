@@ -7,16 +7,18 @@ import { BankOfServiceApplicationComponent } from './containers/bank-of-service-
 import { FileUplaodComponent } from './containers/file-uplaod/file-uplaod.component';
 import { ConfirmComponent } from './containers/confirm/confirm.component';
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
+  { path: 'dashboard', component: DashboardComponent},
   { path: 'application-contact-info', component: ApplicationContactInfoComponent},
   { path: 'select-account-type', component: SelectAccountTypeComponent},
   { path: 'enterprise-information', component: EnterpriseInformationComponent },
   { path: 'bank-of-service-application', component: BankOfServiceApplicationComponent},
   { path: 'file-uplaod', component: FileUplaodComponent},
   { path: 'confirm', component: ConfirmComponent },
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' }
  ];
 
 @NgModule({

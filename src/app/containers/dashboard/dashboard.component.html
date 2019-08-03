@@ -1,0 +1,9 @@
+<h4 class="text-center"> DASHBOARD</h4>
+<h5>BANK ACCOUNTS:</h5>
+<mat-divider></mat-divider>
+<alpha-bank-account></alpha-bank-account>
+<h5>WALLETS:</h5>
+<mat-divider></mat-divider>
+<ng-container *ngFor="let item of walletArray; let i=index">
+    <alpha-wallet [walletData]="item"></alpha-wallet>
+</ng-container>

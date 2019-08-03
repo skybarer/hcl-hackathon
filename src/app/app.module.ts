@@ -20,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { BankAccountComponent } from './components/bank-account/bank-account.component';
+import { WalletComponent } from './components/wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     AutocompleteComponent,
     LoginComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    BankAccountComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,

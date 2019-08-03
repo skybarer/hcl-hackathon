@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+// import { FormData } from 'src/app/services/form-data';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +15,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private router: Router
+    private router: Router,
+    // private formData: FormData
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,8 @@ export class DashboardComponent implements OnInit {
     subscribe( (response) => {
       this.bankArray = response[0].accountList;
       this.walletArray = response[1].walletList;
+      this.bankArray = this.mapImageToJsonBank(this.bankArray);
+      this.walletArray = this.mapImageToJsonWallet(this.walletArray);
     }
     );
 
@@ -100,10 +104,61 @@ export class DashboardComponent implements OnInit {
     //     'updatedTm': '2019-08-03 16:51:59'
     //   }
     // ];
+
+      // this.formData.set
   }
+
 
   fundTransfer() {
     this.router.navigateByUrl('/bank-transfer');
+  }
+
+  mapImageToJsonBank(data: any[]) {
+     data.map((item) => {
+      item['imageSrc'] = this.dashboardImage(item.mappedBeneBank);
+      //  console.log('mapImageToJson', item);
+    });
+    return data;
+  }
+  mapImageToJsonWallet(data: any[]) {
+     data.map((item) => {
+      item['imageSrc'] = this.dashboardImage(item.custWalletTypeId);
+      //  console.log('mapImageToJson', item);
+    });
+    return data;
+  }
+
+  dashboardImage(imageType: string) {
+
+   let imaageUrl = '';
+
+    switch (imageType) {
+      case 'HDFC':
+        imaageUrl = '/assets/images/icici_bank.jpg';
+        break;
+      case 'HSBC':
+        imaageUrl = '/assets/images/dbs_bank.png';
+        break;
+      case 'OLA':
+        imaageUrl = '/assets/images/ola_wallet.jpg';
+        break;
+      case 'AIRTEL MONEY':
+        imaageUrl = '/assets/images/ola-money.png';
+        break;
+      case 'PHONE PAY':
+        imaageUrl = '/assets/images/ola_wallet.jpg';
+        break;
+      case 'FREE RECHARGE':
+        imaageUrl = '/assets/images/paytm-wallet.png';
+        break;
+      case 'NPCI':
+        imaageUrl = '/assets/images/ola_wallet.jpg';
+        break;
+      // default:
+      //   imaageUrl = '/assets/images/ola_wallet.jpg';
+    }
+   console.log('imageType' + imageType + imaageUrl );
+   return  imaageUrl;
   }
 
 

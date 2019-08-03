@@ -27,6 +27,7 @@ import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.
 import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
+// import { FormData } from './services/form-data';
 
 @NgModule({
   declarations: [

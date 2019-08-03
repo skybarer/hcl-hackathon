@@ -13,6 +13,10 @@ export class LoginComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.loginForm = new FormGroup({
+      proxyId: new FormControl('', {
+      })
+    });
   }
 
   onSubmit() {

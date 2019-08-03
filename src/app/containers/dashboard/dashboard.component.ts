@@ -152,13 +152,13 @@ export class DashboardComponent implements OnInit {
         imaageUrl = '/assets/images/ola_wallet.jpg';
         break;
       case 'AIRTEL MONEY':
-        imaageUrl = '/assets/images/ola-money.png';
+        imaageUrl = '/assets/images/airtel_money.jpg';
         break;
       case 'PHONE PAY':
-        imaageUrl = '/assets/images/ola_wallet.jpg';
+        imaageUrl = '/assets/images/phonepey-wallet.png';
         break;
       case 'FREE RECHARGE':
-        imaageUrl = '/assets/images/paytm-wallet.png';
+        imaageUrl = '/assets/images/freerecharge-wallet.png';
         break;
       case 'NPCI':
         imaageUrl = '/assets/images/ola_wallet.jpg';

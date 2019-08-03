@@ -23,7 +23,6 @@ export class UpiPasswordComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalComponent, {
       data: {}
     });
-
   }
 
 }

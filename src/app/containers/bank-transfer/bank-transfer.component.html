@@ -1,7 +1,7 @@
 <h4 class="text-center"> WALLET TRANSFER</h4>
 <mat-card id="bank-transfer">
   <form [formGroup]="walletForm" (ngSubmit)="onSubmit()">
-    <h4>Transfer From:</h4>
+    <h4>Transfer From</h4>
     <mat-form-field>
       <mat-label>Select</mat-label>
       <mat-select formControlName="fromWalletId">
@@ -11,7 +11,7 @@
       </mat-select>
     </mat-form-field>
 
-    <h4>Transfer To: </h4>
+    <h4>Transfer To</h4>
     <mat-form-field>
       <mat-label>Select</mat-label>
       <mat-select formControlName="toWalletId">

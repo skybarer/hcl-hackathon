@@ -1,0 +1,51 @@
+<mat-list role="list">
+
+  <ng-container *ngFor="let item of items; let i=index">
+
+    <a [routerLink]="item.link" routerLinkActive="active">
+      <mat-list-item role="listitem">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+              <span class="item-content" (click)="selectUserIndex(i)"> {{item.name}}</span>
+              <span class="svg-container" *ngIf="item.tickIcon">
+                <svg viewBox="0 0 12 9" style="fill: none;stroke: #ff3333;stroke-width: 2px;">
+                  <path d="M6 1.757L10.243 6 6 10.243M1 6h9"></path>
+                </svg>
+              </span>
+              <span class="svg-container" *ngIf="item.arrowIcon">
+                <svg viewBox="0 0 10 10" style="stroke: green;fill: green;">
+                  <path
+                    d="m9.133704,1.970166c-0.170669,-0.172691 -0.447372,-0.172691 -0.618075,0l-5.236057,5.297606l-2.012655,-2.036293c-0.170669,-0.172691 -0.447372,-0.172674 -0.618075,0c-0.170686,0.172674 -0.170686,0.452627 0,0.625318l2.321693,2.348926c0.170618,0.172674 0.447526,0.172553 0.618075,0l5.545095,-5.610222c0.170686,-0.172674 0.170669,-0.452644 0,-0.625335l0,0l0,0z" />
+                </svg>
+              </span>
+          </div>
+      </mat-list-item>
+        <mat-divider></mat-divider>
+    </a>
+  
+    <!-- <mat-divider *ngIf="isMdDividerRequiredForListItem(i);"></mat-divider> -->
+
+    <ng-container *ngFor="let subItem of item.subItems; let j=index; let last=last">
+        <a [routerLink]="subItem.link" routerLinkActive="active" [hidden]="!(i === selectedUserIndex)" >
+          <mat-list-item class="sub-item">
+              <div fxLayout="row" fxLayoutAlign="space-between center" >
+                  <span class="sub-item-content"> {{subItem.name}}</span>
+                  <span class="svg-container" *ngIf="subItem.tickIcon">
+                    <svg viewBox="0 0 12 9" style="fill: none;stroke: #ff3333;stroke-width: 2px;">
+                      <path d="M6 1.757L10.243 6 6 10.243M1 6h9"></path>
+                    </svg>
+                  </span>
+                  <span class="svg-container" *ngIf="subItem.arrowIcon">
+                    <svg viewBox="0 0 10 10" style="stroke: green;fill: green;">
+                      <path
+                        d="m9.133704,1.970166c-0.170669,-0.172691 -0.447372,-0.172691 -0.618075,0l-5.236057,5.297606l-2.012655,-2.036293c-0.170669,-0.172691 -0.447372,-0.172674 -0.618075,0c-0.170686,0.172674 -0.170686,0.452627 0,0.625318l2.321693,2.348926c0.170618,0.172674 0.447526,0.172553 0.618075,0l5.545095,-5.610222c0.170686,-0.172674 0.170669,-0.452644 0,-0.625335l0,0l0,0z" />
+                    </svg>
+                  </span>
+              </div>
+          </mat-list-item>
+          <mat-divider *ngIf="last"></mat-divider>
+        </a>
+    </ng-container>
+
+  </ng-container>
+
+</mat-list>

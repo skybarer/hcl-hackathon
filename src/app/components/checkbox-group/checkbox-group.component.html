@@ -1,0 +1,13 @@
+<div [formGroup]="validateForm">
+    <!-- <pre>{{inputData | json}}</pre> -->
+  {{validateForm.value.checkbox | json}}
+    <ng-container *ngFor="let item of inputData; let i=index">
+        <mat-card class="alpha-chechbox-group">
+            <mat-checkbox   [value]="item.label" [checked]="item.checked" [disabled]="item.disabled"
+            (click)="onToggle(item.label, $event, item.checked, i)" color="warn">{{item.label}}</mat-checkbox>
+        </mat-card>
+    </ng-container>
+</div>
+
+   
+    

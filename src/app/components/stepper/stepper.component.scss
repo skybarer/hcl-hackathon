@@ -1,0 +1,60 @@
+.mat-list-base {
+	padding-top: 100px;
+	// border: 1px dotted;
+}
+
+/deep/ a {
+	text-decoration: none;
+}
+
+.item-content {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	color: #aba6a6;
+}
+
+.sub-item-content {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	padding-left: 22px;
+	color: #aba6a6;
+}
+
+.svg-container {
+	width: 21px;
+	height: 21px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	// top: 12px;
+	right: 0px;
+	// margin-right: 5px;
+}
+
+svg {
+	width: 12px;
+	height: 12px;
+}
+
+path {
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+:host /deep/ .mat-list-base {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+:host /deep/ .mat-list-item-content {
+    padding: 0 !important;
+    font-size: 14px;
+}
+
+.sub-item.mat-list-item {
+    padding: 0;
+    height: 42px;
+}

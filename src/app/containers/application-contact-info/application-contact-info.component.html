@@ -1,0 +1,45 @@
+<div class="content-container">
+  <h2>Application Contact Info</h2>
+  <p>Please complete in english unless untill specified.</p>
+</div>
+<div fxLayout="row"   fxLayoutAlign="start center" fxLayoutGap="0px">
+  <mat-card>
+  <form [formGroup]="validateForm" (ngSubmit)="submit()">
+    <div class="form-container">
+    
+        <!-- <mat-form-field>
+          <mat-label>Contact Name</mat-label>
+          <input matInput type="text" placeholder="Contact Name">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="number" placeholder="Phone Number">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Contact MailBox</mat-label>
+          <input matInput type="email" placeholder="Contact MailBox">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Account Manager</mat-label>
+            <input matInput type="text" placeholder="Account Manager (required)">
+        </mat-form-field>  -->
+
+        
+          <alpha-autocomplete formControlName="branch"  [options]="options" ></alpha-autocomplete>
+          <alpha-autocomplete formControlName="branch1" [options]="options"></alpha-autocomplete>
+        <!-- <pre>Form values: {{validateForm.value | json}}</pre>
+          <alpha-checkbox-group [color]="warn" [inputData]="inputData" formControlName="items"></alpha-checkbox-group>
+          <br>
+          <alpha-checkbox-group [color]="warn" [inputData]="inputData1" formControlName="items1"></alpha-checkbox-group>
+          <br>
+           -->
+
+          <button mat-raised-button color="warn">submit</button>
+         
+      </div>
+    </form>
+  </mat-card>
+</div>

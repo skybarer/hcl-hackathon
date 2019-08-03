@@ -1,0 +1,21 @@
+.container {
+    // margin-left: auto;
+    // margin-right: auto;
+    // box-sizing: border-box;
+}
+.mat-toolbar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mat-toolbar-row{
+      max-width: 1024px;
+}
+
+.img-container {
+    width: 6rem;
+    height: auto;
+}

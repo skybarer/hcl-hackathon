@@ -1,0 +1,118 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-alpha-primary: mat-palette($mat-indigo);
+$ng-alpha-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$ng-alpha-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ng-alpha-theme: mat-light-theme($ng-alpha-primary, $ng-alpha-accent, $ng-alpha-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ng-alpha-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+body{
+    background: #f7f7f9;
+     text-align: left;
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5;
+     color: #212529;
+     word-wrap: break-word;
+}
+// div, span,h1,h2,h3,h4,h5,h6,p {
+//     // border: 1px dotted #f4cb36d1;
+//     // border: thin dotted #dadce0;
+//      border: thin dotted #f4cb36d1;
+// }
+
+
+// containers basic structure start
+
+div mat-card{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    // border: thin solid #bcbcbc8f;
+    border: thin solid #dad9d9;
+    box-shadow: none !important;
+    padding: 10px 20px !important;
+}
+
+div mat-form-field{
+    padding-bottom: 36px;
+}
+
+
+.content-container {
+    // margin: 16px 0;
+    margin-left: 5px;
+    margin-right:5px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 480px) {
+  .content-container{
+    margin-top: 100px;
+    margin-bottom: 22px;
+  }
+
+  div mat-card{
+    padding: 28px 92px !important;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    max-width: 60%;
+  }
+
+  .content-container {
+    margin: 16px 0;
+    text-align: left;
+  }
+
+
+
+}
+
+ .content-container h2,
+ .content-container p{
+    margin: 0 !important;
+    // padding: 0 16px;
+    color: rgb(89, 100,109);
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+.form-container > * {
+  width: 100%;
+}
+
+// containers basic structure end
+
+.mat-toolbar-multiple-rows {
+    min-height: 64px;
+    height: 60px;
+}

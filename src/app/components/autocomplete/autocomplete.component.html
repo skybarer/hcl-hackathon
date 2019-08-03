@@ -1,0 +1,10 @@
+<mat-form-field>
+  <input #input matInput type="text" placeholder="Branch" aria-label="Branch" class="form-control" [matAutocomplete]="autocomplete"
+    (input)="valueChanged($event)" [readonly]="readonly" (focus)="$event.target.select()" (blur)="onTouched()">
+  <mat-autocomplete #autocomplete="matAutocomplete" [displayWith]="displayFunction"
+    (optionSelected)="onOptionSelected($event)">
+    <mat-option *ngFor="let option of filteredOptions" [value]="option">
+      {{ displayFunction(option) }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

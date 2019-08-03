@@ -1,15 +1,13 @@
-<mat-card id="container">
-
 <h4 class="text-center"> DASHBOARD</h4>
-
-<h5>BANK ACCOUNTS:</h5>
+<mat-card id="container">
+<h5>BANK ACCOUNTS</h5>
 <mat-divider></mat-divider>
 <ng-container *ngFor="let item of bankArray; let i=index">
   <alpha-bank-account [bankData]="item"></alpha-bank-account>
 </ng-container>
 <mat-divider></mat-divider>
 
-<h5>WALLETS:</h5>
+<h5>WALLETS</h5>
 <mat-divider></mat-divider>
 <ng-container *ngFor="let item of walletArray; let i=index">
   <alpha-wallet [walletData]="item"></alpha-wallet>

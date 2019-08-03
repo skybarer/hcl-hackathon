@@ -20,6 +20,7 @@ export class UpiPasswordComponent implements OnInit {
   }
 
   onSubmit() {
+    this.router.navigate(['/dashboard']);
     const dialogRef = this.dialog.open(ModalComponent, {
       data: {}
     });

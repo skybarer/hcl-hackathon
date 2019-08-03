@@ -16,8 +16,8 @@ export class ApiService {
 
 
   login(data: any): Observable<any> {
-    console.log(this.constants.URI + this.constants.LOGIN)
-    return this.http.post<any>(this.constants.URI + this.constants.LOGIN, data);
+    console.log(this.constants.URI + this.constants.DASHBOARD)
+    return this.http.post<any>(this.constants.URI + this.constants.DASHBOARD, data.proxyId);
   }
 
 

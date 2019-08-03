@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
     this.apiService.dashboard(phone).
     subscribe( (response) => {
       this.bankArray = response[0].accountList;
-      this.walletArray = response[1].walletList;
+      this.walletArray = response[0].walletList;
       this.bankArray = this.mapImageToJsonBank(this.bankArray);
       this.walletArray = this.mapImageToJsonWallet(this.walletArray);
     }

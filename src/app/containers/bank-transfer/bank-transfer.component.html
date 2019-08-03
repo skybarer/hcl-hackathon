@@ -1,3 +1,31 @@
-<p>
-  bank-transfer works!
-</p>
+<h4 class="text-center"> BANK TRANSFER</h4>
+<mat-card id="bank-transfer">
+
+  <h4>Transfer From:</h4>
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Transfer To: </h4>
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h4>Amount: </h4>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="transfer amount" value="1000">
+  </mat-form-field>
+
+
+  <button mat-raised-button color="warn">TRNASFER</button>
+</mat-card>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'alpha-dashboard',
@@ -37,9 +39,18 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
+
+  fundTransfer() {
+    this.router.navigateByUrl('/bank-transfer');
+  }
+
+
 
 }

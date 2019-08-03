@@ -24,6 +24,7 @@ import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { BankAccountComponent } from './components/bank-account/bank-account.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';
+import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.
     DashboardComponent,
     BankAccountComponent,
     WalletComponent,
-    BankTransferComponent
+    BankTransferComponent,
+    UpiPasswordComponent
   ],
   imports: [
     BrowserModule,

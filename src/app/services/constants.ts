@@ -4,9 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Constants {
-   IPADDRESS = 'http://192.168.1.100';
-   PORT = '8082';
-   URI = 'http://192.168.1.100:8082/';
-   /*LOGIN = 'balances';*/
+   URI = 'http://10.0.2.107:8082/';
    DASHBOARD = 'balances?proxyId=';
+   WALLET_TRANSFER = 'transactions/settle';
 }

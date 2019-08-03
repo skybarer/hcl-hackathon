@@ -25,4 +25,8 @@ export class ApiService {
     return this.http.get<any>(this.constants.URI + this.constants.DASHBOARD + data );
   }
 
+  walletTransfer(data: any): Observable<any> {
+    return this.http.post<any>(this.constants.URI + this.constants.WALLET_TRANSFER , data );
+  }
+
 }

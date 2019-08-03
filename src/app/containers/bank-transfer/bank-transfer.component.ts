@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormData } from 'src/app/services/formdata';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'alpha-bank-transfer',
@@ -15,7 +16,8 @@ export class BankTransferComponent implements OnInit {
   walletForm: FormGroup;
   constructor(
       private formData: FormData,
-      private router: Router
+      private router: Router,
+      private apiService: ApiService
   ) { }
 
 
@@ -41,8 +43,12 @@ export class BankTransferComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('this.walletForm', this.walletForm.value);
-       this.router.navigate(['/upi-password']);
+      this.apiService.walletTransfer(this.walletForm.value)
+      .subscribe((response) => {
+        console.log('this.walletForm', this.walletForm.value);
+        console.log('this.walletForm', response);
+        this.router.navigate(['/upi-password']);
+      });
   }
 
 }

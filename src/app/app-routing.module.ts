@@ -1,11 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ApplicationContactInfoComponent } from './containers/application-contact-info/application-contact-info.component';
-import { SelectAccountTypeComponent } from './containers/select-account-type/select-account-type.component';
-import { EnterpriseInformationComponent } from './containers/enterprise-information/enterprise-information.component';
-import { BankOfServiceApplicationComponent } from './containers/bank-of-service-application/bank-of-service-application.component';
-import { FileUplaodComponent } from './containers/file-uplaod/file-uplaod.component';
-import { ConfirmComponent } from './containers/confirm/confirm.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
-// import { FormData } from 'src/app/services/form-data';
+import { FormData } from 'src/app/services/formdata';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,11 +16,12 @@ export class DashboardComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private router: Router,
-    // private formData: FormData
+    private formData: FormData
   ) { }
 
   ngOnInit() {
-    this.loadDashboardData('8099992277');
+    const data = this.formData.getOption();
+    this.loadDashboardData(data['proxyId']);
   }
 
   loadDashboardData(phone: any) {
@@ -30,6 +31,8 @@ export class DashboardComponent implements OnInit {
       this.walletArray = response[0].walletList;
       this.bankArray = this.mapImageToJsonBank(this.bankArray);
       this.walletArray = this.mapImageToJsonWallet(this.walletArray);
+      this.formData.setOption('bankArray', this.bankArray);
+      this.formData.setOption('walletArray', this.walletArray);
     }
     );
 
@@ -105,7 +108,13 @@ export class DashboardComponent implements OnInit {
     //   }
     // ];
 
-      // this.formData.set
+    // this.bankArray = this.mapImageToJsonBank(this.bankArray);
+    // this.walletArray = this.mapImageToJsonWallet(this.walletArray);
+
+      // this.formData.setOption('bankArray', this.bankArray);
+      // this.formData.setOption('walletArray', this.walletArray);
+
+      // console.log(this.formData.getOption());
   }
 
 

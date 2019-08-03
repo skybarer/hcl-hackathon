@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormData } from 'src/app/services/formdata';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'alpha-bank-transfer',
@@ -7,15 +10,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BankTransferComponent implements OnInit {
 
-  constructor() { }
+  data: any;
+  walletList: any = [];
+  walletForm: FormGroup;
+  constructor(
+      private formData: FormData,
+      private router: Router
+  ) { }
 
-  foods: any[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
 
   ngOnInit() {
+    this.data = this.formData.getOption();
+    this.data.walletArray.map((item: any) => {
+      this.walletList.push(
+        {
+          value: item.customerMappingId ,
+          viewValue: item.custWalletTypeId
+        }
+      )
+    });
+     this.walletForm = new FormGroup({
+      proxyId: new FormControl(this.data['proxyId'], { }),
+      fromWalletId: new FormControl('', { }),
+      toWalletId: new FormControl('', { }),
+      amount: new FormControl('', { }),
+
+    });
+
+
+  }
+
+  onSubmit() {
+    console.log('this.walletForm', this.walletForm.value);
+       this.router.navigate(['/upi-password']);
   }
 
 }

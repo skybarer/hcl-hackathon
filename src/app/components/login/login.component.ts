@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {ApiService} from '../../services/api.service';
 import {Router} from '@angular/router';
+import { FormData } from 'src/app/services/formdata';
 
 @Component({
   selector: 'alpha-login',
@@ -11,7 +12,11 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isLoading = false;
-  constructor(private apiService: ApiService, private router: Router) { }
+  constructor(
+    private apiService: ApiService,
+     private router: Router,
+     private formData: FormData
+     ) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -24,6 +29,7 @@ export class LoginComponent implements OnInit {
     this.apiService.login({
       proxyId: this.loginForm.value.proxyId
     });
+    this.formData.setOption('proxyId', this.loginForm.value.proxyId);
     this.router.navigate(['/dashboard']);
   }
 }

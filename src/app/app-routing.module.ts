@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';
 import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
+import {OlaOffersComponent} from './containers/ola-offers/ola-offers.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},

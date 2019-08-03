@@ -1,19 +1,18 @@
 <mat-card id="container">
-  <img class="login-image"  src="./assets/images/navbar_logo.jpg">
+  <img class="login-image" src="./assets/images/navbar_logo.jpg">
   <mat-card-header class="text-center">
     <mat-card-title>Login to UCI</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="example-form">
+    <form [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()" class="example-form">
       <mat-form-field class="example-full-width">
-        <input type="text" matInput placeholder="User ID" >
+        <input type="text" matInput placeholder="User ID" formControlName="proxyId">
       </mat-form-field>
-    
-    <mat-form-field class="example-full-width">
-      <input type="password" matInput placeholder="Password" >
-    </mat-form-field>
-
-    <button mat-raised-button color="warn">Login</button>
+      <mat-form-field class="example-full-width">
+        <input type="password" matInput placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button color="warn" [disabled]="loginForm.invalid">Login</button>
     </form>
   </mat-card-content>
 </mat-card>

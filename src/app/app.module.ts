@@ -25,8 +25,8 @@ import { BankAccountComponent } from './components/bank-account/bank-account.com
 import { WalletComponent } from './components/wallet/wallet.component';
 import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';
 import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
-import { ApiService } from './services/api.service';
-import { HttpClientModule } from '@angular/common/http';
+import {ApiService} from './services/api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,8 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

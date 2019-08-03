@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {ApiService} from '../../services/api.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'alpha-login',
@@ -10,7 +11,7 @@ import {ApiService} from '../../services/api.service';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isLoading = false;
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -23,5 +24,6 @@ export class LoginComponent implements OnInit {
     this.apiService.login({
       proxyId: this.loginForm.value.proxyId
     });
+    this.router.navigate(['/dashboard']);
   }
 }

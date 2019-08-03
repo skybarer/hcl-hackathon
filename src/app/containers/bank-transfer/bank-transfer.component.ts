@@ -29,7 +29,7 @@ export class BankTransferComponent implements OnInit {
           value: item.customerMappingId ,
           viewValue: item.custWalletTypeId
         }
-      )
+      );
     });
      this.walletForm = new FormGroup({
       proxyId: new FormControl(this.data['proxyId'], { }),

@@ -12,8 +12,10 @@ export class UpiPasswordComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() {
-     this.router.navigate(['/dashboard']);
+  ngOnInit() { }
+
+  onSubmit() {
+    this.router.navigate(['/dashboard']);
   }
 
 }

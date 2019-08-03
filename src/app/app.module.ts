@@ -27,6 +27,8 @@ import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.
 import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { OlaOffersComponent } from './containers/ola-offers/ola-offers.component';
+import {MatSnackBarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import {HttpClientModule} from '@angular/common/http';
     BankAccountComponent,
     WalletComponent,
     BankTransferComponent,
-    UpiPasswordComponent
+    UpiPasswordComponent,
+    OlaOffersComponent
   ],
   imports: [
     BrowserModule,
@@ -59,9 +62,10 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    MatSnackBarModule
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UpiPasswordComponent],
 })
 export class AppModule { }

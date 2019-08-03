@@ -16,12 +16,12 @@ export class ApiService {
 
 
   login(data: any): Observable<any> {
-    console.log(this.constants.URI + this.constants.DASHBOARD)
+    //console.log(this.constants.URI + this.constants.DASHBOARD)
     return this.http.post<any>(this.constants.URI + this.constants.DASHBOARD, data.proxyId);
   }
 
 
-  dashboard(data: any): Observable<any> {
+ dashboard(data: any): Observable<any> {
     return this.http.get<any>(this.constants.URI + this.constants.DASHBOARD + data );
   }
 

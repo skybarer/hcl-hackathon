@@ -142,10 +142,10 @@ export class DashboardComponent implements OnInit {
    let imaageUrl = '';
 
     switch (imageType) {
-      case 'HDFC':
+      case 'ICICI':
         imaageUrl = '/assets/images/icici_bank.jpg';
         break;
-      case 'HSBC':
+      case 'DBS':
         imaageUrl = '/assets/images/dbs_bank.png';
         break;
       case 'OLA':

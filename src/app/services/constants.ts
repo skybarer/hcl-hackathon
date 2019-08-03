@@ -6,5 +6,5 @@ import { Injectable } from '@angular/core';
 export class Constants {
    URI = 'http://10.0.2.107:8082/';
    DASHBOARD = 'balances?proxyId=';
-   WALLET_TRANSFER = 'transactions/settle';
+   WALLET_TRANSFER = 'transactions/settlement';
 }

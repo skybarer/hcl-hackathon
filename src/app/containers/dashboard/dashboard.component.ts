@@ -10,21 +10,6 @@ export class DashboardComponent implements OnInit {
   walletArray = [
     {
      'id': 1,
-     'image': 'assets/images/icici_bank.jpg',
-     'amout': 1000,
-     'name': 'ICICI'
-    },
-     {
-     'id': 1,
-     'image': 'assets/images/dbs_bank.png',
-     'amout': 2000,
-     'name': 'DBS'
-    }
-  ];
-
-  bankArray = [
-    {
-     'id': 1,
      'image': 'assets/images/ola-money.png',
      'amout': 1000,
      'name': 'Ola Money'
@@ -33,7 +18,22 @@ export class DashboardComponent implements OnInit {
      'id': 1,
      'image': 'assets/images/paytm-wallet.png',
      'amout': 2000,
-     'name': 'Paytm Wallet'
+     'name': 'Paytm'
+    }
+  ];
+
+  bankArray = [
+    {
+     'id': 1,
+     'image': 'assets/images/icici_bank.jpg ',
+     'amout': 1000,
+     'name': 'ICICI'
+    },
+     {
+     'id': 1,
+     'image': 'assets/images/dbs_bank.png',
+     'amout': 2000,
+     'name': 'DBS'
     }
   ];
 

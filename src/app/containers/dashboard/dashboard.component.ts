@@ -25,15 +25,15 @@ export class DashboardComponent implements OnInit {
   bankArray = [
     {
      'id': 1,
-     'image': 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     'image': 'assets/images/ola-money.png',
      'amout': 1000,
-     'name': 'paytm'
+     'name': 'Ola Money'
     },
      {
      'id': 1,
-     'image': 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     'image': 'assets/images/paytm-wallet.png',
      'amout': 2000,
-     'name': 'paytm'
+     'name': 'Paytm Wallet'
     }
   ];
 

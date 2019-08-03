@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {ModalComponent} from '../modal/modal.component';
 
@@ -14,9 +14,11 @@ export class UpiPasswordComponent implements OnInit {
     private router: Router,
     private dialog: MatDialog,
     private snackBar: MatSnackBar
-  ) { }
+  ) {
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   onSubmit() {
     const dialogRef = this.dialog.open(ModalComponent, {

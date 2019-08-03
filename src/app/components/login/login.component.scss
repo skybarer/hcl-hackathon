@@ -1,0 +1,51 @@
+ #container {
+    // background: #fff;
+    // margin: 60px auto 40px;
+    // padding: 40px;
+    // box-shadow: 1px 1px 4px #eee;
+    // border-radius: 5px;
+    // border: 2px solid #eee;
+    // transform-origin: 0 0;
+    // animation: swing-in .15s;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
+    margin-top: 5%;
+}
+
+.login-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 85px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    max-width: 100% !important;
+}
+
+.mat-card-header {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+button.mat-raised-button.mat-warn {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    padding: 4px 20px;
+    border-radius: 3px;
+}

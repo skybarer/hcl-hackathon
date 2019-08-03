@@ -40,6 +40,7 @@ body{
      line-height: 1.5;
      color: #212529;
      word-wrap: break-word;
+     font-family: Open Sans,sans-serif;
 }
 // div, span,h1,h2,h3,h4,h5,h6,p {
 //     // border: 1px dotted #f4cb36d1;
@@ -61,7 +62,7 @@ div mat-card{
 }
 
 div mat-form-field{
-    padding-bottom: 36px;
+    padding-bottom: 25px;
 }
 
 
@@ -80,7 +81,7 @@ div mat-form-field{
   }
 
   div mat-card{
-    padding: 28px 92px !important;
+    padding: 28px 40px !important;
   }
 
   .mat-form-field-appearance-legacy .mat-form-field-wrapper {
@@ -115,4 +116,8 @@ div mat-form-field{
 .mat-toolbar-multiple-rows {
     min-height: 64px;
     height: 60px;
+}
+
+.text-center {
+    text-align: center;
 }

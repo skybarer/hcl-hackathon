@@ -3,7 +3,8 @@
     <img mat-card-image height="109" [src]='walletData?.image' alt="Photo of a Shiba Inu">
     <mat-divider></mat-divider>
     <mat-card-content>
-      <p class="wallet-amount">{{walletData?.amout}}</p>
+      <!-- {{walletData |  json }} -->
+      <p class="wallet-amount">{{walletData?.custWalletBalance}}</p>
     </mat-card-content>
   </mat-card>
 </div>

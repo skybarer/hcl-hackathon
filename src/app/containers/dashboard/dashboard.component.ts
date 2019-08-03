@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
   walletArray = [
     {
      'id': 1,
-     'image': 'assets/images/icici_bank.png',
+     'image': 'assets/images/icici_bank.jpg',
      'amout': 1000,
      'name': 'ICICI'
     },

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {ApiService} from '../../services/api.service';
 
 @Component({
   selector: 'alpha-login',
@@ -9,13 +10,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isLoading = false;
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(){
-
+  onSubmit() {
+    this.apiService.login({
+      proxyId: this.loginForm.value.proxyId
+    });
   }
-
 }

@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
   walletArray = [
     {
      'id': 1,
-     'image': 'assets/images/ola-money.png',
+     'image': 'assets/images/ola_wallet.jpg',
      'amout': 1000,
      'name': 'Ola Money'
     },

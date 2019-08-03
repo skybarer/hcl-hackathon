@@ -28,7 +28,8 @@ import { UpiPasswordComponent } from './containers/upi-password/upi-password.com
 import {ApiService} from './services/api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { OlaOffersComponent } from './containers/ola-offers/ola-offers.component';
-import {MatSnackBarModule} from '@angular/material';
+import {MatDialogModule, MatSnackBarModule} from '@angular/material';
+import { ModalComponent } from './containers/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MatSnackBarModule} from '@angular/material';
     WalletComponent,
     BankTransferComponent,
     UpiPasswordComponent,
-    OlaOffersComponent
+    OlaOffersComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -62,10 +64,11 @@ import {MatSnackBarModule} from '@angular/material';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],
-  entryComponents: [UpiPasswordComponent],
+  entryComponents: [UpiPasswordComponent, ModalComponent]
 })
 export class AppModule { }

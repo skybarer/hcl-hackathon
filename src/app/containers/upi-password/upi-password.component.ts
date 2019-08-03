@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {MatSnackBar} from '@angular/material';
+import {MatDialog, MatSnackBar} from '@angular/material';
+import {ModalComponent} from '../modal/modal.component';
 
 @Component({
   selector: 'alpha-upi-password',
@@ -11,28 +12,32 @@ export class UpiPasswordComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private dialog: MatDialog,
     private snackBar: MatSnackBar
   ) { }
 
   ngOnInit() { }
 
   onSubmit() {
-    const snackBarRef =  this.snackBar.open('Do you want to avail Offers', 'YES', {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      data: {}
+    });
+/*    const snackBarRef =  this.snackBar.open('Do you want to avail Offers', 'YES', {
       duration: 2000,
     });
 
     snackBarRef.afterDismissed().subscribe(() => {
       this.router.navigate(['/dashboard']);
       // console.log('The snack-bar was dismissed');
-    });
+    });*/
 
 
-    snackBarRef.onAction().subscribe(() => {
+    /*snackBarRef.onAction().subscribe(() => {
       alert('you will be redirected to offers');
       console.log('The snack-bar action was triggered!');
-    });
+    });*/
 
-    snackBarRef.dismiss();
+    //snackBarRef.dismiss();
   }
 
 }

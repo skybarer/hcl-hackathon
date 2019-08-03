@@ -26,13 +26,13 @@ export class DashboardComponent implements OnInit {
     {
      'id': 1,
      'image': 'assets/images/icici_bank.jpg ',
-     'amout': 1000,
+     'amout': 10000,
      'name': 'ICICI'
     },
      {
      'id': 1,
      'image': 'assets/images/dbs_bank.png',
-     'amout': 2000,
+     'amout': 20000,
      'name': 'DBS'
     }
   ];

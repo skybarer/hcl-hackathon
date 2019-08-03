@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {MatDialog, MatSnackBar} from '@angular/material';
+import {MatDialog} from '@angular/material';
 import {ModalComponent} from '../modal/modal.component';
 
 @Component({
@@ -12,8 +12,7 @@ export class UpiPasswordComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private dialog: MatDialog,
-    private snackBar: MatSnackBar
+    private dialog: MatDialog
   ) {
   }
 

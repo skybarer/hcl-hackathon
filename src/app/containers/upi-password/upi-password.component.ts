@@ -24,6 +24,13 @@ export class UpiPasswordComponent implements OnInit {
     const dialogRef = this.dialog.open(ModalComponent, {
       data: {}
     });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.router.navigate(['/alpha-ola-offers']);
+      } else {
+
+      }
+    });
   }
 
 }

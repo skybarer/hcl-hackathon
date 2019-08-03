@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'bank-transfer', component: BankTransferComponent},
   { path: 'upi-password', component: UpiPasswordComponent},
+  { path: 'alpha-ola-offers', component: OlaOffersComponent},
 
 
 

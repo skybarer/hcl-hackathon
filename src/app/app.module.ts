@@ -23,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { BankAccountComponent } from './components/bank-account/bank-account.component';
 import { WalletComponent } from './components/wallet/wallet.component';
+import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { WalletComponent } from './components/wallet/wallet.component';
     HomeComponent,
     DashboardComponent,
     BankAccountComponent,
-    WalletComponent
+    WalletComponent,
+    BankTransferComponent
   ],
   imports: [
     BrowserModule,

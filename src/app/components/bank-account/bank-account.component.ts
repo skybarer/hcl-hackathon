@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'alpha-bank-account',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class BankAccountComponent implements OnInit {
 
   constructor() { }
+
+  @Input() bankData: any;
+
 
   ngOnInit() {
   }

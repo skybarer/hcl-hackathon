@@ -22,6 +22,21 @@ export class DashboardComponent implements OnInit {
     }
   ];
 
+  bankArray = [
+    {
+     'id': 1,
+     'image': 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     'amout': 1000,
+     'name': 'paytm'
+    },
+     {
+     'id': 1,
+     'image': 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+     'amout': 2000,
+     'name': 'paytm'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

@@ -1,42 +1,19 @@
-div.container{
-    // max-width: 1024px;
-     max-width: 575px;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-
+div.container {
+  max-width: 575px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-image: url("./../assets/images/Mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 88%;
 }
 
-// div mat-card{
-//     display: flex;
-//     flex-direction: row;
-//     flex: 1;
-//     border: thin solid #bcbcbc8f;
-//     box-shadow: none;
-// }
+#container {
+  opacity: 0.8;
+}
 
-
-// .content-container {
-//     margin: 16px 0;
-// }
-
-
-// @media screen and (min-width: 480px) {
-//   .content-container{
-//     margin-top: 100px;
-//     margin-bottom: 22px;
-//   }
-
-// }
-
-//  .content-container h2,
-//  .content-container p{
-//     margin: 0 !important;
-//     // padding: 0 16px;
-//     color: rgb(89, 100,109);
-// }
-
-.previous-next{
+.previous-next {
   margin-top: 24px;
   margin-bottom: 24px;
   // margin-right: 70px;

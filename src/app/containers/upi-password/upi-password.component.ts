@@ -28,7 +28,7 @@ export class UpiPasswordComponent implements OnInit {
       if (result) {
         this.router.navigate(['/alpha-ola-offers']);
       } else {
-
+        this.router.navigate(['/alpha-e-wallet']);
       }
     });
   }

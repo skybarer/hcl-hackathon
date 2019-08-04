@@ -30,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { OlaOffersComponent } from './containers/ola-offers/ola-offers.component';
 import {MatDialogModule, MatSnackBarModule} from '@angular/material';
 import { ModalComponent } from './containers/modal/modal.component';
+import { EWalletComponent } from './containers/e-wallet/e-wallet.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ModalComponent } from './containers/modal/modal.component';
     BankTransferComponent,
     UpiPasswordComponent,
     OlaOffersComponent,
-    ModalComponent
+    ModalComponent,
+    EWalletComponent
   ],
   imports: [
     BrowserModule,

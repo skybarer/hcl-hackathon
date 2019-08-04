@@ -133,7 +133,7 @@ export class DashboardComponent implements OnInit {
   mapImageToJsonWallet(data: any[]) {
      data.map((item) => {
       item['imageSrc'] = this.dashboardImage(item.custWalletTypeId);
-       item['redirectUrl'] = this.dashboardUrl(item.mappedBeneBank);
+       item['redirectUrl'] = this.dashboardUrl(item.custWalletTypeId);
       //  console.log('mapImageToJson', item);
     });
     return data;
@@ -155,6 +155,7 @@ export class DashboardComponent implements OnInit {
         break;
       case 'OLA':
         imaageUrl = '/assets/images/ola_wallet.jpg';
+        redirectUrl = 'https://www.olamoney.com/';
         break;
       case 'AIRTEL MONEY':
         imaageUrl = '/assets/images/airtel_money.jpg';
@@ -191,19 +192,19 @@ export class DashboardComponent implements OnInit {
         break;
       case 'OLA':
         imaageUrl = '/assets/images/ola_wallet.jpg';
-        redirectUrl = 'https://www.dbs.com.sg/index/default.page';
+        redirectUrl = 'https://www.olamoney.com/';
         break;
       case 'AIRTEL MONEY':
         imaageUrl = '/assets/images/airtel_money.jpg';
-        redirectUrl = 'https://www.dbs.com.sg/index/default.page';
+        redirectUrl = 'https://www.airtel.in/';
         break;
       case 'PHONE PAY':
         imaageUrl = '/assets/images/phonepey-wallet.png';
-        redirectUrl = 'https://www.dbs.com.sg/index/default.page';
+        redirectUrl = 'https://www.phonepe.com/en/';
         break;
       case 'FREE RECHARGE':
         imaageUrl = '/assets/images/freerecharge-wallet.png';
-        redirectUrl = 'https://www.dbs.com.sg/index/default.page';
+        redirectUrl = 'https://www.freecharge.in/';
         break;
       case 'NPCI':
         imaageUrl = '/assets/images/ola_wallet.jpg';

@@ -1,9 +1,11 @@
-<div class="text-center" style="display: inline-block">
-  <mat-card class="bank-card">
-    <img mat-card-image src={{bankData?.imageSrc}} alt="bank name">
-    <mat-divider></mat-divider>
-    <mat-card-content>
-      <p class="bank-amount">{{bankData?.acctBalance}}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
+<a [href]='bankData?.redirectUrl' target="_blank">
+  <div class="text-center" style="display: inline-block">
+    <mat-card class="bank-card">
+      <img mat-card-image src={{bankData?.imageSrc}} alt="bank name">
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p class="bank-amount">{{bankData?.acctBalance}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</a>

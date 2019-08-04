@@ -1,13 +1,13 @@
-<h4 class="text-center"> DASHBOARD</h4>
+<h4 class="text-center">Your Balances</h4>
 <mat-card id="container">
-<h5>BANK ACCOUNTS</h5>
+<h5>Bank Accounts</h5>
 <mat-divider></mat-divider>
 <ng-container *ngFor="let item of bankArray; let i=index">
   <alpha-bank-account [bankData]="item"></alpha-bank-account>
 </ng-container>
 <mat-divider></mat-divider>
 
-<h5>WALLETS</h5>
+<h5>Wallets</h5>
 <mat-divider></mat-divider>
 <ng-container *ngFor="let item of walletArray; let i=index">
   <alpha-wallet [walletData]="item"></alpha-wallet>
@@ -16,6 +16,6 @@
 
 <!-- wallet transfer -->
 <div class="text-center">
-  <button mat-raised-button color="warn" (click)="fundTransfer( )">Fund transfer</button>
+  <button mat-raised-button color="warn" (click)="fundTransfer( )">Transfer Fund</button>
 </div>
 </mat-card>

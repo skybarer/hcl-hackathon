@@ -4,13 +4,15 @@
     <mat-card-title>UCI - FFLAPP</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form [formGroup]="loginForm"
-          (ngSubmit)="onSubmit()" class="example-form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="example-form">
       <mat-form-field class="example-full-width">
-        <input type="text" matInput placeholder="Mobile Number" formControlName="proxyId">
+        <input type="number" matInput placeholder="Mobile Number" minlength="10" maxlength="10"
+          formControlName="proxyId">
+        <mat-error *ngIf="hasError('proxyId', 'required')">mobile number is required</mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input type="password" matInput placeholder="Password">
+        <input type="password" matInput placeholder="Password" formControlName="password">
+        <mat-error *ngIf="hasError('password', 'required')">password is required</mat-error>
       </mat-form-field>
       <button mat-raised-button color="warn" [disabled]="loginForm.invalid">Login</button>
     </form>

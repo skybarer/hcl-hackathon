@@ -20,16 +20,20 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = new FormGroup({
-      proxyId: new FormControl('', {
-      })
+      proxyId: new FormControl('',  [Validators.required]),
+      password: new FormControl('',  [Validators.required])
     });
   }
 
+  public  hasError = (controlName: string, errorName: string) => {
+    return this.loginForm.controls[controlName].hasError(errorName);
+  }
+
   onSubmit() {
-    this.apiService.login({
-      proxyId: this.loginForm.value.proxyId
-    });
-    this.formData.setOption('proxyId', this.loginForm.value.proxyId);
-    this.router.navigate(['/dashboard']);
+    if (this.loginForm.valid) {
+        this.apiService.login({proxyId: this.loginForm.value.proxyId});
+        this.formData.setOption('proxyId', this.loginForm.value.proxyId);
+        this.router.navigate(['/dashboard']);
+    }
   }
 }

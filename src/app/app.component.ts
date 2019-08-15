@@ -14,13 +14,16 @@ export class AppComponent implements OnInit {
   @ViewChild(ProgressBarComponent) progressBar: ProgressBarComponent;
   @ViewChild(StepperComponent) stepper: StepperComponent;
 
+   loaderStatus = true;
    constructor(
      private router: Router
    ) {}
 
    ngOnInit(): void {
+     this.loaderStatus = false;
      // load to first page on refresh.
       this.router.navigate(['/']);
+      this.loaderStatus = true;
    }
 
   decrement = () => {
@@ -32,6 +35,15 @@ export class AppComponent implements OnInit {
   increment = () => {
     this.progressBar.increment();
     this.stepper.nextLink();
+  }
+
+
+  showLoader = () => {
+    this.loaderStatus = false;
+  }
+
+  hideLoader = () => {
+    this.loaderStatus = true;
   }
 
 }

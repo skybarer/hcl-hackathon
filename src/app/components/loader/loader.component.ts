@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderService } from 'src/app/services/loader.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'alpha-loader',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoaderComponent implements OnInit {
 
-  constructor() { }
+  color = 'primary';
+  mode = 'indeterminate';
+  value = 50;
+
+
+  constructor(
+    private loader: LoaderService
+  ) {
+   }
 
   ngOnInit() {
   }

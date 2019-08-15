@@ -26,12 +26,14 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { BankTransferComponent } from './containers/bank-transfer/bank-transfer.component';
 import { UpiPasswordComponent } from './containers/upi-password/upi-password.component';
 import {ApiService} from './services/api.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { OlaOffersComponent } from './containers/ola-offers/ola-offers.component';
 import {MatDialogModule, MatSnackBarModule} from '@angular/material';
 import { ModalComponent } from './containers/modal/modal.component';
 import { EWalletComponent } from './containers/e-wallet/e-wallet.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderService } from './services/loader.service';
+import { InterceptorService } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,14 @@ import { LoaderComponent } from './components/loader/loader.component';
     MatSnackBarModule,
     MatDialogModule
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService,
+    LoaderService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+       multi: true
+     }],
   bootstrap: [AppComponent],
   entryComponents: [UpiPasswordComponent, ModalComponent]
 })

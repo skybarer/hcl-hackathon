@@ -2,10 +2,16 @@
 <!-- <div class="loading-indicator">
   <mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner>
 </div> -->
-
-<div class="loader-overlay"></div>
-<div class="loader-wrapper">
-  <svg class="spinner" viewBox="0 0 50 50">
-    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-  </svg>
+<!-- {{loader.loaderStatus}} -->
+<div *ngIf="loader.loaderStatus">
+  <div class="loader-overlay"></div>
+  <div class="loader-wrapper">
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+    </svg>
+  </div>
 </div>
+<!-- <div *ngIf="isLoading | async" class="overlay">
+  <mat-progress-spinner class="spinner" [color]="color" [mode]="mode" [value]="value">
+  </mat-progress-spinner>
+</div> -->

@@ -9,11 +9,13 @@
         <input type="number" matInput placeholder="Mobile Number" minlength="10" maxlength="10"
           formControlName="proxyId">
         <mat-error *ngIf="hasError('proxyId', 'required')">mobile number is required</mat-error>
+        <mat-error *ngIf="hasError('proxyId', 'maxlength')">only 10 digits are allowed</mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
         <input type="password" matInput placeholder="Password" formControlName="password">
         <mat-error *ngIf="hasError('password', 'required')">password is required</mat-error>
       </mat-form-field>
+      <mat-error *ngIf="isValid">login details are not valid</mat-error>
       <button mat-raised-button color="warn" [disabled]="loginForm.invalid">Login</button>
     </form>
   </mat-card-content>

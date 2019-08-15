@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit,OnChanges {
 
   ngOnInit() {
     this.loginForm = new FormGroup({
-      proxyId: new FormControl(8099992277,  [Validators.required, Validators.maxLength(10)]),
+      proxyId: new FormControl('',  [Validators.required, Validators.maxLength(10)]),
       password: new FormControl('',  [Validators.required])
     });
   }

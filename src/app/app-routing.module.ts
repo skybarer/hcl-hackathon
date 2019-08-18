@@ -23,8 +23,8 @@ const routes: Routes = [
   // { path: 'bank-of-service-application', component: BankOfServiceApplicationComponent},
   // { path: 'file-uplaod', component: FileUplaodComponent},
   // { path: 'confirm', component: ConfirmComponent },
-  // { path: '**', redirectTo: '/login', pathMatch: 'full' }
-   {path: '**', component: EWalletComponent},
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  //  {path: '**', component: EWalletComponent},
  ];
 
 @NgModule({

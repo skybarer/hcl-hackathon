@@ -1,6 +1,39 @@
-<div class="text-center">E-WALLTES</div>
-<div class="row">
-  <div class="column">
+<div class="text-center">
+  <h3>E-WALLTES</h3>
+</div>
+<mat-divider></mat-divider>
+
+
+<p>Select the type of offer you want to use</p>
+<form [formGroup]="walletForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Select Offer</mat-label>
+    <mat-select formControlName="selectValue">
+      <mat-option *ngFor="let offer of offeres" [value]="offer.value">
+        {{offer.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- {{this.walletForm.value.selectValue}} -->
+  <ng-container *ngFor="let item of offeresList">
+    <mat-card id="container" *ngIf="(item.type === this.walletForm.value.selectValue )">
+      <mat-card-header class="text-center">
+      </mat-card-header>
+      <mat-card-content>
+        <a [href]="item.link" target="_blank"><img class="login-image" src={{item.imgSrc}}></a>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+
+</form>
+
+
+
+
+
+
+
+<!-- <div class="column">
     <mat-card id="container">
 
       <mat-card-header class="text-center">
@@ -19,7 +52,8 @@
 
       </mat-card-header>
       <mat-card-content>
-        <a href="https://in.bookmyshow.com/" target="_blank"><img class="login-image" src="./assets/images/bookMy.jpg"></a>
+        <a href="https://in.bookmyshow.com/" target="_blank"><img class="login-image"
+            src="./assets/images/bookMy.jpg"></a>
       </mat-card-content>
 
     </mat-card>
@@ -31,7 +65,8 @@
 
       </mat-card-header>
       <mat-card-content>
-        <a href="https://www.flipkart.com/" target="_blank"><img class="login-image" src="./assets/images/flipkart.jpg"></a>
+        <a href="https://www.flipkart.com/" target="_blank"><img class="login-image"
+            src="./assets/images/flipkart.jpg"></a>
       </mat-card-content>
 
     </mat-card>
@@ -47,5 +82,4 @@
       </mat-card-content>
 
     </mat-card>
-  </div>
-</div>
+  </div> -->

@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'bank-transfer', component: BankTransferComponent},
   { path: 'upi-password', component: UpiPasswordComponent},
   { path: 'alpha-ola-offers', component: OlaOffersComponent},
-  {path:'alpha-e-wallet', component:EWalletComponent},
+  {path: 'alpha-e-wallet', component: EWalletComponent},
 
 
 
@@ -23,7 +23,8 @@ const routes: Routes = [
   // { path: 'bank-of-service-application', component: BankOfServiceApplicationComponent},
   // { path: 'file-uplaod', component: FileUplaodComponent},
   // { path: 'confirm', component: ConfirmComponent },
-  { path: '**', redirectTo: '/login', pathMatch: 'full' }
+  // { path: '**', redirectTo: '/login', pathMatch: 'full' }
+   {path: '**', component: EWalletComponent},
  ];
 
 @NgModule({
